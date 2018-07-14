@@ -10,6 +10,7 @@ import (
 	"os"
 	"flag"
 	"sync"
+	"github.com/coreos/go-systemd/daemon"
 )
 
 func main() {
@@ -85,6 +86,7 @@ func main() {
 			}).Fatal("Couldn't follow journal!")
 			os.Exit(-1)
 		}
-		wg.Wait()
 	}
+	daemon.SdNotify(true, daemon.SdNotifyReady)
+	wg.Wait()
 }

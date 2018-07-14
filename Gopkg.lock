@@ -3,7 +3,10 @@
 
 [[projects]]
   name = "github.com/coreos/go-systemd"
-  packages = ["sdjournal"]
+  packages = [
+    "daemon",
+    "sdjournal"
+  ]
   revision = "39ca1b05acc7ad1220e09f133283b8859a8b71ab"
   version = "v17"
 
@@ -65,6 +68,6 @@
 [solve-meta]
   analyzer-name = "dep"
   analyzer-version = 1
-  inputs-digest = "6d87267f573788df5a7692f17b08a5a5030904a881a04fcf91e0908cd722cd3e"
+  inputs-digest = "c425fdebec16ecdf5981f92a8b61bd78a22118d2484dc05b88a8369b456b6cd9"
   solver-name = "gps-cdcl"
   solver-version = 1

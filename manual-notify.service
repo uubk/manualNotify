@@ -1,0 +1,13 @@
+[Unit]
+Description=Send DNS NOTIFYs manually
+After=network.target bind9.service
+Wants=bind9.service
+ConditionPathExists=/etc/manualNotify/config.yml
+
+[Service]
+ExecStart=/usr/bin/mnDaemon -config /etc/manualNotify/config.yml
+Restart=always
+Type=notify
+
+[Install]
+WantedBy=multi-user.target
