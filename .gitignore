@@ -1,4 +1,5 @@
 .idea
+obj-x86_64-linux-gnu
 vendor
 main
 config.yml
