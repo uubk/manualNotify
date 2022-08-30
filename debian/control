@@ -4,7 +4,7 @@ Priority: extra
 Maintainer: Maximilian Falkenstein <maxf@njsm.de>
 Build-Depends: debhelper (>= 10),
                dh-golang,
-               golang-any,
+               golang-1.17-go,
                libsystemd-dev
 Standards-Version: 3.9.8
 Homepage: https://github.com/uubk/manualNotify
